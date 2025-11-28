@@ -30,6 +30,10 @@ import           Formatting
 import qualified Network.Mux as Mux
 import           Network.Mux.Types (SDUHeader (..), unRemoteClockModel)
 import           Network.TypedProtocol.Codec (AnyMessage (..))
+#ifdef linux_HOST_OS
+import           Network.Mux.TCPInfo (StructTCPInfo (..))
+#endif
+
 
 --------------------------------------------------------------------------------
 -- Mux Tracer
